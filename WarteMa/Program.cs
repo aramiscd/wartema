@@ -26,7 +26,7 @@ class Program
 
         while (true)
         {
-            if (args.Any(FileHasChanged))
+            if (FilesHaveChanged(args))
             {
                 File.WriteAllText(MemoryFilePath, JsonSerializer.Serialize(_memory));
                 return;
@@ -36,20 +36,25 @@ class Program
         }
     }
 
-    static bool FileHasChanged(string path)
+    static bool FilesHaveChanged(string[] paths)
     {
-        var pathHash = Hash(path);
-        var newData = File.ReadAllText(path);
-        var newDataHash = Hash(newData);
-        var oldDataHash = _memory.GetValueOrDefault(pathHash);
+        var result = false;
 
-        if (oldDataHash != newDataHash)
+        foreach (var path in paths)
         {
-            _memory[pathHash] = newDataHash;
-            return true;
+            var pathHash = Hash(path);
+            var newData = File.ReadAllText(path);
+            var newDataHash = Hash(newData);
+            var oldDataHash = _memory.GetValueOrDefault(pathHash);
+            if (oldDataHash != newDataHash)
+            {
+                _memory[pathHash] = newDataHash;
+                Console.WriteLine(path);
+                result = true;
+            }
         }
 
-        return false;
+        return result;
     }
 
     static string Hash(string rawData)
