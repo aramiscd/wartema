@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WarteMa", "WarteMa\WarteMa.csproj", "{FC8CA3BC-DA68-4D72-AA0E-E7A97E983847}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F146F1E8-3C4D-4BE1-B45D-1F9D10A6004F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC8CA3BC-DA68-4D72-AA0E-E7A97E983847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8CA3BC-DA68-4D72-AA0E-E7A97E983847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8CA3BC-DA68-4D72-AA0E-E7A97E983847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8CA3BC-DA68-4D72-AA0E-E7A97E983847}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
